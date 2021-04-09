@@ -13,12 +13,12 @@ old_address=$(curl -s http://whatismyip.akamai.com/)
 while true
 do
 	# Save the current ip address
-	current_address=$(curl -s "http:whatismyip.akamai.com/")
+	current_address=$(curl -s "http://whatismyip.akamai.com")
 
 	# Check if the ip address has changed
 	if [[ "$current_address" != "$old_address" ]]
 	then
-		curl -u "$username:$password" "http://www.ovh.com/nic/update?system=dyndns&hostname=$hostname&myip=$current_address"
+		curl -u "$username:$password" "https://www.ovh.com/nic/update?system=dyndns&hostname=$hostname&myip=$current_address"
 	fi
 
 	# Update the old ip address
