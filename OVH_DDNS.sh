@@ -22,7 +22,7 @@ do
 	fi
 
 	# Update the old ip address
-	((old_address = current_address))
+	old_address=$current_address
 
 	# Wait for the set amount of seconds
 	sleep $delay
