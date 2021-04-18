@@ -7,7 +7,7 @@ password=Your_Password
 delay=900
 
 # Get the current ip address
-old_address=$(curl -s http://whatismyip.akamai.com)
+old_address=""
 
 # Loop forever
 while true
